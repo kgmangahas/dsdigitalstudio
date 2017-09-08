@@ -16,8 +16,23 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	<!-- build:css assets/styles/styles.css -->
+	<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/styles-99bd8455f4.css" rel="stylesheet">
+	<!-- endbuild -->
+	<!--GOOGLE FONTS-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,400i,700" rel="stylesheet">
+			
 
 	<?php wp_head(); ?>
+
+	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -29,7 +44,7 @@
 	<header class="site-header" role=banner>
 			<div class="site-header__wrapper ">
 				<div class="site-header__logo ">
-					<a class="site-header__brand" href="/"><img src="assets/images/ds-logo.png"></a>					
+					<a class="site-header__brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/ds-logo.png"></a>					
 				</div>
 				
 				
@@ -46,15 +61,7 @@
 					</div>
 
 
-					<nav class="primary-nav primary-nav--top">
-						<ul class="navbar">
-							<li><a href="#">HOME</a></li>
-							<li><a href="#about">ABOUT</a></li>
-							<li><a href="#services">WORK WITH US</a></li>
-							<li><a href="#">CONTACT</a></li>
-							<li><a href="#">BLOG</a></li>
-						</ul>
-					</nav>
+					
 
 					<!-- if the menu (WP admin area) is not set, then the "menu_class" is applied to "container". In other words, it overwrites the "container_class". Ref: http://wordpress.org/support/topic/wp_nav_menu_menu_class-usage-bug?replies=4 -->
 						
