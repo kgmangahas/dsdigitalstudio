@@ -23,7 +23,7 @@
 				<span class="icon icon--ds footer__sign">					
 				</span>						
 
-				<p class="footer__copy">&copy; 2017 DS Digital Studio</p>
+				<p class="footer__copy">&copy;  <?php echo date('Y') ?> <?php echo bloginfo('name'); ?> </p>
 
 				<div class="footer__social-media">
 					<a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--fb"></span></a>
