@@ -38,9 +38,10 @@
 			</div>
 		</div>
 
-<!-- build:js assets/scripts/App.js -->  
-		<script src="<?php bloginfo('template_directory');?>/assets/scripts/App-4ba8e52f1d.js"></script>
-		<!-- endbuild -->
+
+		<script src="<?php bloginfo('template_directory');?>/assets/scripts/App-42eaa20683.js"></script>
+		<script src="<?php bloginfo('template_directory');?>/assets/scripts/Vendor-73d66e3e45.js"></script>
+		
 
 </body>
 </html>

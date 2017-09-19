@@ -17,9 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
-	<!-- build:css assets/styles/styles.css -->
-	<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/styles-99bd8455f4.css" rel="stylesheet">
-	<!-- endbuild -->
+	
+	<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/styles-8536727426.css" rel="stylesheet">
+	
 	<!--GOOGLE FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,400i,700" rel="stylesheet">
 			
