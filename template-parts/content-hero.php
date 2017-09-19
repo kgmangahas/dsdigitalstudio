@@ -17,13 +17,18 @@ $hero_subtitle = get_field("site_sub_description");
 
 					<img srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small.png 188w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small-hi-dpi.png 376w" alt="peonies with laptop" class="hero__img">	
 				</picture>
+				
 
+				<?php if(!empty($hero_title)) : ?>
 				<div class="hero__text-content">
 						
 						<h2 class="hero__title"><?php echo $hero_title ?></h2>
+						<?php if(!empty($hero_title)) : ?>
 						<h1 class="hero__subtitle"><?php echo $hero_subtitle ?></h1>
-						
+						<?php endif ?>
 				</div>
+
+			<?php endif ?>
 			
 			</div>
 	</div>

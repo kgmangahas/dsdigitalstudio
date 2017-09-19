@@ -18,7 +18,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
 	
-	<link href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/styles-5f310c0262.css" rel="stylesheet">
 	
 	<!--GOOGLE FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,400i,700" rel="stylesheet">

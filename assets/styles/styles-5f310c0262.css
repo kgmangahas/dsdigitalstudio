@@ -1280,7 +1280,7 @@ input[type="text"]::placeholder {
     	padding: 15px;    	
     	background-color: transparent;
     	width:100%;
-
+      text-transform: uppercase;
     	z-index: 21;
 		font-size: 1.75rem;
 
@@ -1302,6 +1302,7 @@ input[type="text"]::placeholder {
 .primary-nav a:hover {
 				padding-bottom: 3px;				
 				text-decoration: none;
+        text-transform: uppercase;
 				border-bottom: 1px solid #f4c3c3
 
 
@@ -2627,10 +2628,10 @@ font-weight: 700;
 /* Do not edit modules/_sprite directly as it is automatically generated
 Instead edit gulp/template/sprite */
 .icon {
-            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-7850f8f8.svg');  
+            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-4847a507.svg');  
         }
 .no-svg .icon {
-            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-7850f8f8.png');
+            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-4847a507.png');
         }
 .icon--branding {
         width: 65px;

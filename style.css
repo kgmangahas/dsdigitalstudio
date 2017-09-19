@@ -640,23 +640,6 @@ template {
 [hidden] {
   display: none;
 }
-/* if logged in wordpress move header down */
-.logged-in .site-header {
-    top: 45px;
-}
-@media (min-width:530px) {
-.logged-in .site-header {
-    top: 45px;
-}
-}
-@media (min-width:800px) {
-.logged-in .site-header {
-    top: 0px;
-}
-}
-.logged-in #wpadminbar {
-    position: fixed;
-}
 html {
     overflow-x: hidden;
 }
@@ -732,7 +715,7 @@ button[type="submit"] {
         font-size: 1rem
 }
     }
-input[type="text"]{
+input[type="text"], input[type="email"], input[type="url"] {
     padding: 15px 15px;
     border: none;   
     
@@ -741,7 +724,7 @@ input[type="text"]{
     font-weight: 300;
     font-family: lato;
 }
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder {
             color: #95989A;
             font-size: 0.8125rem;
             letter-spacing: .128em;
@@ -752,7 +735,7 @@ input[type="text"]::-webkit-input-placeholder {
             white-space: pre-line;
 
         }
-input[type="text"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
             color: #95989A;
             font-size: 0.8125rem;
             letter-spacing: .128em;
@@ -763,7 +746,7 @@ input[type="text"]:-ms-input-placeholder {
             white-space: pre-line;
 
         }
-input[type="text"]::placeholder {
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder {
             color: #95989A;
             font-size: 0.8125rem;
             letter-spacing: .128em;
@@ -775,33 +758,50 @@ input[type="text"]::placeholder {
 
         }
 @media (min-width:530px) {
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder {
                 font-size: 0.9375rem
 
         }
-input[type="text"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
                 font-size: 0.9375rem
 
         }
-input[type="text"]::placeholder {
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder {
                 font-size: 0.9375rem
 
         }
     }
 @media (min-width:800px) {
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder {
                 font-size: 1.125rem
 
         }
-input[type="text"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
                 font-size: 1.125rem
 
         }
-input[type="text"]::placeholder {
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder {
                 font-size: 1.125rem
 
         }
     }
+/* if logged in wordpress move header down */
+.logged-in .site-header {
+    top: 45px;
+}
+@media (min-width:530px) {
+.logged-in .site-header {
+    top: 45px;
+}
+}
+@media (min-width:800px) {
+.logged-in .site-header {
+    top: 0px;
+}
+}
+.logged-in #wpadminbar {
+    position: fixed;
+}
 .site-header {
   
   top: 0;
@@ -1295,7 +1295,7 @@ input[type="text"]::placeholder {
       color: #c6a1a1;
 
       text-align: center;
-      text-decoration: none;
+      text-transform: uppercase;
       font-weight: 300;
       display: inline-block;
       padding: 15px;      
@@ -1313,7 +1313,7 @@ input[type="text"]::placeholder {
     
 
       border-bottom: none;
-      text-decoration: none;
+      text-transform: uppercase;
       padding-bottom: -3px;
 
 
@@ -1323,6 +1323,7 @@ input[type="text"]::placeholder {
 .primary-nav a:hover {
         padding-bottom: 3px;        
         text-decoration: none;
+        text-transform: uppercase;
         border-bottom: 1px solid #f4c3c3
 
 
@@ -2648,10 +2649,16 @@ font-weight: 700;
 /* Do not edit modules/_sprite directly as it is automatically generated
 Instead edit gulp/template/sprite */
 .icon {
-            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-7850f8f8.svg');  
+            /*  background-image: url('../../assets/images/sprites/sprite-4847a507.svg'); */  
+            /* for wordpress */
+            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-4847a507.png');
+
         }
 .no-svg .icon {
-            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-7850f8f8.png');
+          /*   background-image: url('../../assets/images/sprites/sprite-4847a507.png'); */
+          /* for wordpress */
+            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-4847a507.png');
+          
         }
 .icon--branding {
         width: 65px;
@@ -2791,6 +2798,36 @@ Instead edit gulp/template/sprite */
       text-align: center;
     }
 .contact input[type="text"] {
+    margin: 0 auto;
+    background-color: rgba(255,224,226,.37);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;    
+    margin-bottom: 8px;
+
+
+
+  }
+.contact input[type="email"] {
+    margin: 0 auto;
+    background-color: rgba(255,224,226,.37);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;    
+    margin-bottom: 8px;
+    border: none;
+
+
+
+
+  }
+.contact input[type="url"] {
     margin: 0 auto;
     background-color: rgba(255,224,226,.37);
     display: -webkit-box;
