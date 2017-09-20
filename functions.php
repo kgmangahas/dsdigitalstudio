@@ -113,10 +113,28 @@ function dsdigitalstudio_widgets_init() {
 }
 add_action( 'widgets_init', 'dsdigitalstudio_widgets_init' );
 
+
+/*add function get image id*/
+// retrieves the attachment ID from the file URL
+
+//add_action('after_setup_theme','pippin_get_image_id');
+
+
+/*add cropped image sizes*/
+// cropped hero
+add_image_size( 'dsdigitalstudio-hero-cropped-large', 1164, 470, true );
+
+// scaled-down cropped hero 1
+add_image_size( 'dsdigitalstudio-hero-cropped-medium', 729, 325, true );
+
+// scaled-down cropped hero 2
+add_image_size( 'dsdigitalstudio-hero-cropped-small', 374, 250, true );
+
 /**
  * Enqueue scripts and styles.
  */
-function dsdigitalstudio_scripts() {
+function dsdigitalstudio_scripts() {	
+
 	wp_enqueue_style( 'dsdigitalstudio-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'dsdigitalstudio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
