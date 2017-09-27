@@ -17,9 +17,9 @@ $about_img_default = get_field("about_img_default");
 						<?php if($about_img_default) : ?>
 							<picture>
 
-								<source sizes="456px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/me--large.png 456w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/me--large-hi-dpi.png 911w" media="(min-width: 1000px)">
-								<source sizes="229px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/me--medium.png 229w, assets/images/me--medium-hi-dpi.png 458w" media="(min-width: 530px)">
-								<img srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/me--small.png 333w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/me--small-hi-dpi.png 665w" alt="woman sitting">
+								<source sizes="456px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/me--large.png 456w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/me--large--hi-dpi.png 911w" media="(min-width: 1000px)">
+								<source sizes="229px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/me--medium.png 229w, assets/images/me--medium--hi-dpi.png 458w" media="(min-width: 530px)">
+								<img srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/me--small.png 333w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/me--small--hi-dpi.png 665w" alt="woman sitting">
 							</picture>
 						<?php else : ?>
 							<?php if(!empty($about_img)) : ?>

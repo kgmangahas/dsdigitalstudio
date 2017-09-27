@@ -677,9 +677,15 @@ a: visited {
     color: $#c6a1a1;
 }
 h2 {
-  font-size: 2.1875rem;
+  font-size: 1.375rem;
   line-height: .97em;
 }
+@media (min-width:800px) {
+h2 {
+        font-size: 2.1875rem;
+        line-height: .97em
+}
+    }
 h3 {
 font-size: 1.375rem;
 }
@@ -785,6 +791,40 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 
         }
     }
+/* styling for mailchimp  */
+.mc4wp-form ::-webkit-input-placeholder { /* WebKit browsers */
+  color: #95989A;
+  font-size: 11px;
+}
+.mc4wp-form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #95989A;
+  font-size: 11px;
+}
+.mc4wp-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #95989A;
+  font-size: 11px;
+}
+.mc4wp-form :-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #95989A;
+  font-size: 11px;
+}
+.mc4wp-alert.mc4wp-notice {
+  color: #f39090 !important;
+}
+.mc4wp-response {
+  color: #f39090;
+}
+.wpcf7-response-output {
+  border: none;
+  color: #f39090;
+}
+div.wpcf7-validation-errors {
+  border: none;
+}
+span.wpcf7-not-valid-tip {
+  color: #f39090;
+  padding-bottom: 10px;
+}
 /* if logged in wordpress move header down */
 .logged-in .site-header {
     top: 45px;
@@ -824,6 +864,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
     max-width: 799px;
     margin-left: auto;
     margin-right: auto;
+    height: 10px;
     
     
   
@@ -831,7 +872,8 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 @media (min-width:800px) {
 .site-header__wrapper {
       width: 100%;
-      max-width: 1200px
+      max-width: 1200px;
+      height: 50px
     
     
   
@@ -1144,13 +1186,9 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
   
   position: relative;
   font-weight: 300;
+  text-align: center;
   
-
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  
-  z-index: 22;
+  z-index: 14;
   
   vertical-align: center;
   
@@ -1164,7 +1202,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
     }
 @media (min-width:800px) {
 .primary-nav {
-    width: 700px
+    width: 100%
   
 }
     }
@@ -1203,6 +1241,8 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 .primary-nav ul {
       margin: 0;
       padding: 0;
+      position: relative;
+      display: inline-block;
       top:auto
     
         
@@ -1401,6 +1441,10 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
   position: relative;
   z-index: 10;
 }
+.hero__full {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
 .hero__top-padding {
       
     margin-top: 50px;
@@ -1515,6 +1559,13 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
   //border: solid black 1px;
   
 }
+.wrapper--pull-top {
+    margin-top: -50px;
+  }
+.wrapper--pull-topmixin atMedium {
+      margin-top: -330px;
+      
+    }
 .wrapper--none {
     
 
@@ -1556,6 +1607,40 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
         display: table;
         
     }
+.row--flex {
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+  }
+.row--flex--text {
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: reverse;
+         -ms-flex-direction: column-reverse;
+             flex-direction: column-reverse;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+    }
+@media (min-width:800px) {
+.row--flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row
+
+  }
+    }
 .row--gutters {
         margin-right: -61px;
     }
@@ -1585,14 +1670,14 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
         padding-right: 15px
     }
     }
-.row__sm-2 {
+.row__sm-6 {
     width: 50%;
     float: left;
   }
 @media (min-width:530px) {
 
     .row__sm-2 {
-    width: 50%;
+    width: 16.67%;
     float: left;
     }
 
@@ -1633,6 +1718,9 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
     }
 @media (min-width:800px) {
 
+    
+  
+  
 
 
 
@@ -1657,6 +1745,11 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
   }
 
 
+  .row__medium-12 {
+    width: 100%;
+  }
+
+
 
 
   .row__offset-3 {
@@ -1672,6 +1765,18 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 
 
   }
+.row__top-padding--small {
+    margin-top: 30px;
+
+
+  }
+@media (min-width:800px) {
+.row__top-padding--small {
+      margin-top: 0
+
+
+  }
+    }
 .row__top-padding--single {
     margin-top: 0;
     
@@ -1714,13 +1819,29 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
   position: relative;
   z-index: 11;
   padding: 1.2rem 0;
+
+
     
 }
 @media (min-width:800px) {
 .page-section {
           padding: 6.375rem 0 4rem 0
+
+
     
 }
+    }
+.page-section__full {
+
+    margin-left: -25px;
+    margin-right: -25px;
+    
+  }
+@media (min-width:800px) {
+.page-section__full {
+      margin: 0
+    
+  }
     }
 .page-section__bg {
     position: absolute;
@@ -1802,11 +1923,85 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 
   }
     }
+.page-section--t-margin-medium {
+    margin-top: 0;
+    
+  }
+@media (min-width:800px) {
+.page-section--t-margin-medium {
+      margin-top: -70px
+    
+  }
+    }
+.page-section--t-margin {
+    margin-top: 30px;
+  }
+@media (min-width:800px) {
+.page-section--t-margin {
+      margin-top: 60px
+  }
+    }
+.page-section--t-b-margin {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+@media (min-width:800px) {
+.page-section--t-b-margin {
+      margin-top: 70px;
+      margin-bottom: 60px
+  }
+    }
+.page-section--pull-top-till-medium {
+    
+    margin-top: -80px;
+    @mixn atMedium {
+      margin-top: -150px;
+    }
+    
+
+
+  }
 .generic-content-container--smaller {
 
 
 
 
+    }
+.generic-content-container--l-r-margin {
+
+        margin: 0 40px;
+    }
+@media (min-width:800px) {
+.generic-content-container--l-r-margin {
+            margin: 0
+    }
+    }
+.generic-content-container ul {
+
+        margin: 0 10px 1.8rem 10px;
+        
+        padding: 0;
+        list-style-type: none;
+    }
+.generic-content-container li {
+     
+        list-style: none;
+        font-weight: 400;
+        line-height: 1.6;   
+        letter-spacing: .041em;   
+        margin-left: 0;
+        
+       font-size: 1rem;
+    }
+@media (min-width:530px) {
+.generic-content-container li {
+             font-size: 1.1875rem
+    }
+    }
+@media (min-width:800px) {
+.generic-content-container li {
+            font-size: 1.25rem
+    }
     }
 .generic-content-container p {
         font-weight: 300;
@@ -1823,7 +2018,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
     }
 @media (min-width:800px) {
 .generic-content-container p {
-            font-size: 1.375rem
+            font-size: 1.25rem
         
     }
     }
@@ -1852,6 +2047,9 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 .headline--darkrose {
     color: #c6a1a1;
   }
+.headline--left-margin {
+    margin-left: 10px;
+  }
 .headline--no-t-margin {
     margin-top: 20px;
   }
@@ -1865,6 +2063,26 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
       margin-top: 5px
   }
     }
+.headline--small {
+    font-size: 1rem;
+    line-height: 1.4em;
+
+
+  }
+@media (min-width:800px) {
+.headline--small {
+      font-size: 1.25rem;
+      line-height: 1.6em
+
+
+  }
+    }
+.headline--thin {
+    font-weight: 300;
+  }
+.headline--regular {
+    font-weight: 400;
+  }
 .headline__bg {
     position: relative;
     width: 100%;
@@ -1967,6 +2185,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
   }
 @media (min-width:800px) {
 .about__hello {
+        display: block;
         width: 50%
     
 
@@ -2118,9 +2337,14 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="u
 
     display: block;
         margin: 0 auto;
+        position: relative;
+        z-index: 15;
        
     
   }
+.services__icon--pull-top {
+          margin-top: -40px;
+        }
 /* &__icon > img {
     width: 60px;
     height: auto;
@@ -2563,7 +2787,7 @@ font-weight: 700;
     }
 .social-icons {
   text-align: center;
-  z-index: 15;
+  z-index: 2;
   position: relative;
   display: block;
   width: 100%;
@@ -2678,15 +2902,15 @@ font-weight: 700;
 /* Do not edit modules/_sprite directly as it is automatically generated
 Instead edit gulp/template/sprite */
 .icon {
-             background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-54a8dfc7.svg');  
+             background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-57df7145.svg');  
         }
 .no-svg .icon {
-            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-54a8dfc7.png');
+            background-image: url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sprites/sprite-57df7145.png');
         }
 .icon--branding {
         width: 65px;
         height: 65px;
-        background-position: 59.146341463414636% 29.63054187192118%;
+        background-position: 45.539906103286384% 81.84729064039409%;
     }
 .icon--ds {
         width: 97px;
@@ -2696,7 +2920,7 @@ Instead edit gulp/template/sprite */
 .icon--fb {
         width: 49px;
         height: 49px;
-        background-position: 53.888888888888886% 57.146118721461185%;
+        background-position: 99.70305676855895% 0;
     }
 .icon--hello {
         width: 228.32px;
@@ -2706,22 +2930,27 @@ Instead edit gulp/template/sprite */
 .icon--instagram {
         width: 49px;
         height: 49px;
-        background-position: 81.11111111111111% 57.146118721461185%;
+        background-position: 99.70305676855895% 22.374429223744293%;
+    }
+.icon--triangles {
+        width: 84px;
+        height: 106px;
+        background-position: 50% 37.129629629629626%;
     }
 .icon--tumbler {
         width: 49px;
         height: 49px;
-        background-position: 53.888888888888886% 79.52054794520548%;
+        background-position: 99.70305676855895% 44.74885844748859%;
     }
 .icon--twitter {
         width: 49px;
         height: 49px;
-        background-position: 81.11111111111111% 79.52054794520548%;
+        background-position: 99.70305676855895% 67.12328767123287%;
     }
 .icon--webdesign {
         width: 65px;
         height: 65px;
-        background-position: 98.78048780487805% 29.63054187192118%;
+        background-position: 76.05633802816901% 81.84729064039409%;
     }
 .gallery {
   position: relative;
@@ -2787,7 +3016,7 @@ Instead edit gulp/template/sprite */
 @media (min-width:800px) {
 .contact {
     margin-left: 20%;
-  margin-right: 20%
+    margin-right: 20%
 
 
 
@@ -2796,6 +3025,16 @@ Instead edit gulp/template/sprite */
 
 }
     }
+.contact--side {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    
+
+
+  
+  }
 .contact__text-content {
     font-size: 1.125rem;
 
@@ -2805,7 +3044,8 @@ Instead edit gulp/template/sprite */
 .contact__text-content--center {
       text-align: center;
     }
-.contact input[type="text"], .contact input[type="email"], .contact input[type="url"] {
+.contact input[type="text"], .contact input[type="email"] {
+
     margin: 0 auto;
     background-color: rgba(255,224,226,.37);
     display: -webkit-box;
@@ -2855,6 +3095,9 @@ Instead edit gulp/template/sprite */
     font-size: 1rem;
 
   }
+.contact__textarea--small {
+        height: 195px;
+      }
 .contact__textarea::-webkit-input-placeholder {
             color: #95989A;
              font-size: 0.8125rem;
