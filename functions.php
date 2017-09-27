@@ -116,8 +116,14 @@ add_action( 'widgets_init', 'dsdigitalstudio_widgets_init' );
 
 /*add function get image id*/
 // retrieves the attachment ID from the file URL
+function pippin_get_image_id($image_url) {
+	global $wpdb;
+	
+	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
+        return $attachment[0]; 
+}
 
-//add_action('after_setup_theme','pippin_get_image_id');
+add_action('after_setup_theme','pippin_get_image_id');
 
 
 /*add cropped image sizes*/

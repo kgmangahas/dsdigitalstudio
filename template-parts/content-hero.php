@@ -5,14 +5,9 @@ $hero_subtitle = get_field("site_sub_description");
 
 $hero_image = get_field("hero_image");
 $default_hero_image = get_field("default_hero_image");
-// retrieves the attachment ID from the file URL
 
-function pippin_get_image_id($image_url) {
-	global $wpdb;
-	
-	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
-        return $attachment[0]; 
-}
+
+
 
 ?>
 
@@ -26,8 +21,9 @@ function pippin_get_image_id($image_url) {
 					<source sizes="1164px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--large.png 1164w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--large-hi-dpi.png 2328w" media="(min-width: 800px)">
 					<source sizes="769px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--medium.png 769w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--medium-hi-dpi.png 1538w" media="(min-width: 530px)">
 
-					<img data-srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small.png 188w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small-hi-dpi.png 376w" alt="peonies with laptop" class="hero__img lazyload">	
+					<img class="hero__img lazyload" data-srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small.png 375w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small-hi-dpi.png 750w" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small.png 375w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small-hi-dpi.png 750w" alt="peonies with laptop" >	
 				</picture>
+
 				<?php else : ?>
 
 					<?php 
