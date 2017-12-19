@@ -1,0 +1,111 @@
+.footer {
+	
+	position: relative;
+	padding-top: 0px;
+	padding-bottom: 180px;
+	height: 170px;
+	margin-left: -25px;
+	margin-right: -25px;
+	
+	@mixin atSmall {
+
+		padding-top: 20px;
+		
+		margin:inherit;
+		height: inherit;
+		padding-bottom: 40px;
+		
+	}
+
+	@mixin atMedium {
+		padding-top: 20px;
+		margin:inherit;
+		height: inherit;
+		padding-bottom: 40px;
+		
+		
+	}
+
+	&--pink {
+		background-color: rgba($blushPink,.49);
+	}
+
+
+	
+	
+
+
+	
+	&__sign {
+
+		position: absolute;
+		top: -170px;
+		left: 50%;
+		transform: translateX(-50%);
+		
+	
+		width: 103px;
+		height: 100px;
+		z-index: 15;
+		display: none;
+		@mixin atSmall {
+			display: block;
+		}
+
+	}
+
+	&__copy {
+		
+		position: absolute;
+		font-size: 1rem;
+		font-weight: 300;		
+		color: $rose;
+		margin-left: 20px;
+		top: 70%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		margin-left: 0;
+		@mixin atSmall {
+
+			
+			left: 0;
+			
+			top: 40%;
+			transform: translateY(-50%);
+			
+		}
+		
+
+
+	}
+	&__social-media {
+
+		
+		
+		width: 100%;
+		position: absolute;
+		
+		left: 50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+
+		text-align: center;
+
+		
+
+			
+
+		@mixin atSmall {
+			
+			
+
+			text-align: right;
+			padding-right: 20px;
+			
+		}
+
+
+		
+	}
+}

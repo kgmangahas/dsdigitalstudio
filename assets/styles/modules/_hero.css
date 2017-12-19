@@ -1,0 +1,97 @@
+.hero {
+	
+	
+	position: relative;
+	z-index: 10;	
+	
+	&__full {
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+
+	&__top-padding {
+			
+		margin-top: 50px;
+
+		@mixin atSmall {
+			margin-top: 70px;
+		}
+		
+		@mixin atMedium {				
+			margin-top: 10px;
+		}
+		
+	
+		
+	}
+	
+	&__wrapper {
+		
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		
+		@mixin atMedium {			
+			padding-top: 20px;
+		}
+		
+	
+		
+	}
+
+
+
+	
+	&__text-content {
+		padding: 0 30px;
+		width: 100%;
+		padding-top: 0;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		
+		width: 100%;
+		text-align: center;  
+		margin: 0;
+		@mixin atSmall {
+			margin: 0 0px;
+		}
+	}
+	
+	&__img {
+		z-index: 0;
+		
+	}
+	
+	&__title {
+		font-family: 'Libre Baskerville', serif;
+		color: $darkPeach;
+		font-size: 1rem;
+		font-weight: 400;
+		
+		@mixin atSmall {
+			font-size: 1.075rem;
+		}
+		@mixin atMedium {
+			font-size: 1.375rem;
+		}
+		
+		
+	}
+	
+	&__subtitle {
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.1rem;
+		font-weight: 400;
+		margin-top: -.6em;
+		
+		@mixin atSmall {
+			font-size: 1.1625rem;
+		}
+		@mixin atMedium {
+			font-size: 1.5625rem;
+		}
+		
+	}
+}

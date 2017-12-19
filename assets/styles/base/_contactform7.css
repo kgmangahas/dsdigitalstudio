@@ -1,0 +1,13 @@
+.wpcf7-response-output {
+	border: none;
+	color: #f39090;
+}
+
+div.wpcf7-validation-errors {
+	border: none;
+}
+
+span.wpcf7-not-valid-tip {
+	color: #f39090;
+	padding-bottom: 10px;
+}

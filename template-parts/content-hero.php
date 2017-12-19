@@ -5,20 +5,23 @@ $hero_subtitle = get_field("site_sub_description");
 
 $hero_image = get_field("hero_image");
 $default_hero_image = get_field("default_hero_image");
+$is_full_width = get_field("hero_full_width");
 
-
-
-
+echo '<script>console.log("PHP error: ' . $hero_image . '")</script>';
 ?>
 
 <!-- hero -->
 <div class="hero hero__top-padding">
-			<div class="wrapper">
+		
+
+	<?php 	if (!$is_full_width) : ?>
+	<div class="wrapper">
+	<?php 	endif ?>
 				
-				<?php if($default_hero_image) : ?>
+				<?php if(empty($hero_image)) : ?>
 				
 				<picture>
-					<source sizes="1164px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--large.png 1164w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--large-hi-dpi.png 2328w" media="(min-width: 800px)">
+					<source sizes="1280px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--large.png 1280w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--large-hi-dpi.png 2560w" media="(min-width: 800px)">
 					<source sizes="769px" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--medium.png 769w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--medium-hi-dpi.png 1538w" media="(min-width: 530px)">
 
 					<img class="hero__img lazyload" data-srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small.png 375w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small-hi-dpi.png 750w" srcset="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small.png 375w, <?php bloginfo('stylesheet_directory'); ?>/assets/images/hero--small-hi-dpi.png 750w" alt="peonies with laptop" >	
@@ -51,7 +54,8 @@ $default_hero_image = get_field("default_hero_image");
 							
 											
 
-						}
+						
+						
 
 					?>
 					<picture>					  	
@@ -59,10 +63,12 @@ $default_hero_image = get_field("default_hero_image");
 					<source media="(min-width:530px)" srcset="<?php echo $hero_cropped_medium_srcset[0] . ' ' . $hero_cropped_medium_srcset[1] . 'w' ?>"sizes="<?php echo $hero_cropped_medium_sizes ?>">
 
 				  	<img data-srcset="<?php echo $hero_cropped_small_srcset[0] . ' ' . $hero_cropped_small_srcset[1] . 'w' ?>" alt="<?php echo esc_attr( $alt );?>"	sizes="<?php echo esc_attr( $hero_cropped_small_sizes );?>" class="hero__img lazyload" />
-				  </picture>
 
+
+				  </picture>
 				
-				<?php endif ?>
+				
+				<?php } endif ?>
 
 
 
@@ -80,5 +86,7 @@ $default_hero_image = get_field("default_hero_image");
 
 			<?php endif ?>
 			
-			</div>
+		<?php 	if(!$is_full_width) : ?>
+		</div>			
+		<?php 	endif ?>
 	</div>

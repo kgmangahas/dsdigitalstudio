@@ -1,0 +1,82 @@
+.gallery {
+	position: relative;
+	
+	margin-bottom: 5px;
+
+	
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+	
+	  background-color: rgba($blushPink,.5);
+		opacity: 1;
+		transition: .5s ease;
+
+		
+		&--white {
+				background-color: rgba($white,.5);
+
+		}
+
+		&--visible {
+			opacity: 1;
+		}
+	 
+	  
+	}
+
+
+
+
+	
+
+
+	&__text {
+		color: $darkgray;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		transform: translate(-50%,-50%);
+
+
+	}
+
+	&__portfolio {
+		color: $black		;
+		
+		text-align: center;
+
+		font-size: 1.5625rem ;
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		
+		
+		transform: translate(-50%,-50%);
+		opacity: 1;
+	}
+
+
+	&:hover &__overlay   {
+		opacity: 1;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:hover &__overlay--white {
+		background-color: 	rgba($blushPink,.5);
+	}
+
+
+
+	
+}

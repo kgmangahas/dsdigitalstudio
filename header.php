@@ -17,10 +17,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
-	
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
 	
 	<!--GOOGLE FONTS-->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300i,300,400,400i,700"  rel="stylesheet">
 			
 
 	<?php wp_head(); ?>
@@ -37,13 +37,19 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dsdigitalstudio' ); ?></a>
+<?php 
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+//echo $image[0];
 
-
+$spriteUrl = get_theme_file_uri('assets/images/sprites/sprite-da968e00.svg');
+$spriteUrlBG = 'background-image: url(' . get_theme_file_uri('assets/images/sprites/sprite-da968e00.svg') . ');';
+ ?>
 	<!-- header -->
 	<header class="site-header" role=banner>
 			<div class="site-header__wrapper ">
 				<div class="site-header__logo ">
-					<a class="site-header__brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/ds-logo.png"></a>					
+					<a class="site-header__brand" href="<?php echo site_url(); ?> "><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/ds-logo.png"></a>					
 				</div>
 				
 				
@@ -77,10 +83,10 @@
 
 					
 					<div class="social-icons social-icons--b-padding social-icons__menu ">
-						<a href="#" class="social-icons__icon"><span class="icon icon--fb"></span></a>
-				          <a href="#" class="social-icons__icon"><span class="icon icon--twitter"></span></a>
-				          <a href="#" class="social-icons__icon"><span class="icon icon--instagram"></span></a>
-				          <a href="#" class="social-icons__icon"><span class="icon icon--tumbler"></span></a>
+						<a href="https://m.facebook.com/donnasalvaneradesignco/" class="social-icons__icon"><span class="icon icon--fb" style="<?php echo $spriteUrlBG;?>"></span></a>
+				          <a href="#" class="social-icons__icon"><span class="icon icon--twitter" style="<?php echo $spriteUrlBG;?>"></span></a>
+				          <a href="https://www.instagram.com/bespokebrands/" class="social-icons__icon"><span class="icon icon--instagram" style="<?php echo $spriteUrlBG;?>"></span></a>
+				          <a href="#" class="social-icons__icon"><span class="icon icon--tumbler" style="<?php echo $spriteUrlBG;?>"></span></a>
 									
 					</div>
 				
@@ -95,5 +101,6 @@
 			
 			
 		</header>
+	
 
 	<div id="content" class="site-content">

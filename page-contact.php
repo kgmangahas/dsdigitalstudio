@@ -18,9 +18,10 @@ get_header(); ?>
 				<div class="page-section__bg">
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/flower-bg.png" alt="peony vector">
 				</div>
-
-				<?php echo do_shortcode('[contact-form-7 id="59" title="Primary Contact Form"]'); ?> 
 				
+				<div class="contact">
+				<?php echo do_shortcode('[contact-form-7 id="59" title="Primary Contact Form"]'); ?> 
+				</div>
 
 			</div>
 		</div>

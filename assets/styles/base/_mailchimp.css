@@ -1,0 +1,28 @@
+/* styling for mailchimp  */
+.mc4wp-form ::-webkit-input-placeholder { /* WebKit browsers */
+  color: #95989A;
+  font-size: 11px;
+}
+
+.mc4wp-form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #95989A;
+  font-size: 11px;
+}
+
+.mc4wp-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #95989A;
+  font-size: 11px;
+}
+
+.mc4wp-form :-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #95989A;
+  font-size: 11px;
+}
+
+.mc4wp-alert.mc4wp-notice {
+  color: #f39090 !important;
+}
+
+.mc4wp-response {
+	color: #f39090;
+}

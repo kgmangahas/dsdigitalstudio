@@ -15,21 +15,21 @@
 
 <?php wp_footer(); ?>
 
-<div class="wrapper ">
-
+<div class="wrapper--none footer footer--pink">
+		<div class="wrapper">
 			<div class="footer">				
-
+				<?php $spriteUrl = get_theme_file_uri('assets/images/sprites/sprite-da968e00.svg'); ?>
 				
-				<span class="icon icon--ds footer__sign">					
+				<span class="icon icon--ds footer__sign" style="background-image: url(<?php echo $spriteUrl ?>);">					
 				</span>						
 
-				<p class="footer__copy">&copy;  <?php echo date('Y') ?> <?php echo bloginfo('name'); ?> </p>
+				<div class="footer__copy">&copy;  <?php echo date('Y') ?> <?php echo bloginfo('name'); ?> </div>
 
 				<div class="footer__social-media">
-					<a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--fb"></span></a>
-				          <a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--twitter"></span></a>
-				          <a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--instagram"></span></a>
-				          <a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--tumbler"></span></a>
+					<a href="https://m.facebook.com/donnasalvaneradesignco/" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--fb" style="background-image: url(<?php echo $spriteUrl; ?>);"></span></a>
+				          <a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--twitter" style="background-image: url(<?php echo $spriteUrl; ?>);"></span></a>
+				          <a href="https://www.instagram.com/bespokebrands/" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--instagram" style="background-image: url(<?php echo $spriteUrl; ?>);"></span></a>
+				          <a href="#" class="social-icons__icon social-icons__icon--footer"><span class="icon icon--tumbler" style="background-image: url(<?php echo $spriteUrl; ?>);"></span></a>
 							
 					
 				</div>
@@ -37,6 +37,7 @@
 				
 			</div>
 		</div>
+</div>
 
 
 		<script src="<?php bloginfo('template_directory');?>/assets/scripts/App-42eaa20683.js"></script>

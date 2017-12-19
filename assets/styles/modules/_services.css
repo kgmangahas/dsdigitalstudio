@@ -1,0 +1,131 @@
+.services {
+	
+	background-color: rgba($peach,.40);
+	position: relative;
+	padding: 10px;
+	font-size: 0.8125rem;
+	font-weight: 300;
+	letter-spacing: .027em;
+
+	margin-left: -10px;
+	margin-right: -10px;
+	
+	@mixin atSmall {
+		font-size: 0.8125rem;
+		margin-left: auto;
+		margin-right: auto;
+		
+
+
+	}
+
+	p {
+		font-size: 0.9375rem;
+	}
+
+	&--center {
+		
+	}
+
+
+	&__icon {
+
+		display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 15;
+
+        &--pull-top {
+        	margin-top: -40px;
+        }
+       
+		
+	}
+
+	/* &__icon > img {
+		width: 60px;
+		height: auto;
+		
+	} */
+
+	&__border {
+
+		border: none;
+		padding: 5px;
+		font-size: 1.125rem;
+
+		@mixin atSmall {
+			border: 1px solid #fff;
+			padding: 15px;
+		}
+
+
+
+	}
+
+	 &__border:last-child {
+	
+		padding-top: 0;
+	
+		@mixin atSmall {
+			padding-top: 10px;
+			padding-bottom: 0;
+		}
+	
+	} 
+
+	&__border > p {
+		margin: 10px 20px 30px 20px;
+		text-align: center;
+		@mixin atSmall {
+			margin: 10px 50px 30px 50px;
+			text-align: left;
+		}
+		@mixin atMedium {
+			margin: 10px 40px 30px 50px;
+			text-align: left;
+
+		}
+		
+
+		
+	}
+
+	
+
+	&__link {
+		font-size: 1rem;
+		text-align: center;
+		display: inherit;
+		padding: 15px;
+		border-radius: 2px;
+		border: 2px solid $rose;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		width: 135px;
+
+		
+
+		@mixin atSmall {
+
+			border: none;
+			width: auto;
+
+			&:hover {
+				color: $black;
+				background-color: none;
+				border: none;
+			}
+
+		}
+
+		
+		
+
+		
+
+	}
+
+	
+}

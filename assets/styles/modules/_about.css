@@ -1,0 +1,151 @@
+.about {
+	position: relative;
+	
+
+	&__hello {
+
+		display: block;
+		width: 100%;
+		
+		
+
+			@mixin atMedium {
+				display: block;
+				width: 50%;
+			}
+
+		&--center {
+			margin-left: auto;
+			margin-right: auto;
+			
+		}
+		
+
+
+		
+			
+		
+	}
+
+
+	&--no-padding-until-small {
+		
+		padding-top: 20px;
+
+		@mixin atMedium {
+			padding-top:0;
+		}
+
+	}
+
+
+	&__text-content {
+		
+	
+
+	}
+	
+	
+	&__t-l-padding-on-small {
+		margin-left: auto;
+		margin-top: auto;
+		
+		@mixin atSmall {
+			margin-left: 30px;
+			margin-top:20px;
+			margin-right: -30px;
+
+
+		}
+
+
+		@mixin atMedium {
+			margin-left: auto;
+		margin-top: auto;
+		margin-right: auto;
+		}
+		
+	}
+	
+
+	&__center {
+		margin-left: auto;
+		margin-top: auto;
+
+	}
+
+
+
+		
+	
+
+	&--center {
+		
+
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		
+			padding: 15px;
+			border-radius: 2px;
+			border: 2px solid $rose;			
+			text-align: center;
+			width: 155px;
+		
+		@mixin atMedium {
+			transform: none;
+			left: 0%;
+			position: inherit;
+			float: right;
+			margin-top: 0px;
+			width: auto;
+
+			border: none;
+		}
+
+	
+		
+
+	}
+
+	&__link {
+		
+		position: relative;
+		text-align: center;
+		display: inherit;		
+		
+		font-size:  1rem;
+		letter-spacing: .074em;
+		border: 2px solid $rose;
+		padding: 15px;
+		width: 155px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@mixin atSmall {
+			font-size: 1.0625rem;
+			letter-spacing: .074em;
+			float: right;
+			width: 225px;
+
+		}
+
+		@mixin atLarge{
+			font-size: 1.0625rem;
+			letter-spacing: .015em;
+			float: right;
+			width: 225px;
+
+
+		}
+	}
+
+	&__link:hover {
+		background-color: rgba($rose,.2) ;
+		border: none;
+	}
+
+
+
+	
+}

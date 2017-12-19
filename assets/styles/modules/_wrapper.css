@@ -1,0 +1,60 @@
+.wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 1200px;
+
+
+	@mixin atLarge {
+		 width: 960px;
+    max-width: 100%;
+	}
+	
+	
+	@mixin atXL {
+		width: 1164px;
+		max-width: 100%;
+	}
+
+	&--pull-top {
+		margin-top: -50px;
+
+		&mixin atMedium {
+			margin-top: -330px;
+			
+		}
+	}
+
+	&--none {
+		
+
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atMedium {
+			
+
+		}
+		
+
+		
+	}
+	
+	//border: solid black 1px;
+	
+	
+	
+	&--medium {
+		max-width: 840px;
+	}
+
+	.wrapper {
+      	padding-left: 0;
+        padding-right: 0;
+	
+		
+	}
+  
+}

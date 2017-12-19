@@ -1,0 +1,210 @@
+.primary-nav {
+	
+	position: relative;
+	font-weight: 300;
+	text-align: center;
+	
+	z-index: 14;
+	
+	vertical-align: center;
+	
+	
+	@mixin atSmall {
+	
+		width: 100%;
+	}
+	
+	@mixin atMedium {
+		width: 100%;
+	}
+
+	
+	&--top {
+		
+		margin-top: 50px;		
+		
+		@mixin atSmall {
+			
+			margin-top: 30px;
+		}
+		
+		@mixin atMedium {
+			padding-top: 10px;
+			margin-top: 0;
+			
+		}
+	}
+	
+	
+		
+	ul {
+		margin: 0;
+		padding: 0;
+		@mixin clearFix;		
+		position: absolute;
+		left:0;
+		top: 0px;		
+	
+		
+		
+		@mixin atMedium {
+			margin: 0;
+			padding: 0;
+			position: relative;
+			display: inline-block;
+			@mixin clearFix;
+			top:auto;
+		}
+		
+        
+    }
+    
+    li {
+
+    	margin: 0;
+    	padding: 0;
+    	list-style: none;
+    	@mixin clearFix;
+
+
+    	width: 100%;
+    	letter-spacing: .122em;
+
+    	display: inline-block;
+
+
+		opacity: 0;
+		animation: FadeInNav 1s ease-in;
+		animation-fill-mode: forwards;
+		
+		&:nth-child(1) {			
+			animation-delay: .1s;		
+			
+		}
+		
+		&:nth-child(2) {
+			
+			animation-delay: .3s;
+			
+		}
+
+		&:nth-child(3) {
+			
+			animation-delay: .5s;
+			
+		}
+
+		&:nth-child(4) {
+		
+			animation-delay: .7s;
+			
+		}
+
+		&:nth-child(5) {
+			
+			animation-delay: 1s;
+			
+		}
+
+
+
+    	
+    	@mixin atMedium {
+    		animation: none;
+    		background-color: transparent;
+    		padding-right: 60px;
+    		float: left;
+    		display: block;
+    		width: auto;
+    		opacity: 1;
+
+    	}
+			
+    }
+    
+    li:last-child {
+			
+       
+			padding-right: 0;
+			@mixin atMedium {
+				padding-right: 0px;
+			}
+			
+       
+    }
+    
+    a {
+    	color: $darkRose;
+
+    	text-align: center;
+    	text-transform: uppercase;
+    	font-weight: 300;
+    	display: inline-block;
+    	padding: 15px;    	
+    	background-color: transparent;
+    	width:100%;
+
+    	z-index: 21;
+		font-size: 1.75rem;
+    	
+    	
+		
+		&:hover {
+		
+
+			border-bottom: none;
+			text-transform: uppercase;
+			padding-bottom: -3px;
+			
+			@mixin atMedium {
+				padding-bottom: 3px;				
+				text-decoration: none;
+				text-transform: uppercase;
+				border-bottom: 1px solid $rose;
+			}
+
+
+
+		}
+
+    	@mixin atSmall {
+    		font-size: 2.4375rem;
+    		
+    		transition: opacity .3s ease;
+
+    		
+    	}
+        
+        @mixin atMedium {
+        
+            background-color: transparent;
+            font-size: 0.8125rem;
+            padding: 12px 0;
+            color: #A8A19B;
+            font-weight: 400;
+            &.is-current-link {
+                color: #fabb69;
+            }
+        }
+
+
+        
+        
+    }
+	
+}
+
+
+@keyframes FadeInNav {
+	0%{
+		opacity: 0;
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

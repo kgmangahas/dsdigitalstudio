@@ -1,0 +1,235 @@
+.row {
+	@mixin clearFix;
+	
+	
+
+
+	&--flex {
+
+		display: flex;
+		flex-direction: column;
+
+		&--text {
+		 flex-direction: column-reverse;
+        justify-content: flex-end;
+		}
+
+		@mixin atMedium {
+			display: flex;
+    		flex-direction: row;
+		}
+
+	}
+	
+	
+	
+
+
+	
+	&--gutters {
+        margin-right: 0px;
+         @mixin atMedium {
+        	padding-right: -61px;
+        }
+    }
+	&--gutters > div {
+        padding-right: 0px;
+
+        @mixin atMedium {
+        	padding-right: 61px;
+        }
+       
+    }
+
+    
+   
+
+    &--gutters-small {
+    	margin-right: -45px;
+    }
+    
+    &--gutters-small > div {
+    	padding-right: 45px;
+    }
+
+    &--gutters-xs {
+    	margin-right: -5px;
+
+    	@mixin atMedium {
+    		margin-right: -15px;
+
+    	}
+    }
+    
+    &--gutters-xs > div {
+    	padding-right: 5px;
+
+    	@mixin atMedium {
+    		padding-right: 15px;
+    	}
+    }
+    
+  	&__sm-6 {
+		width: 50%;
+		float: left;
+	}
+
+
+	@mixin atSmall {
+
+		&__sm-2 {
+		width: 16.67%;
+		float: left;
+		}
+
+
+		&__sm-4 {
+		width: 33.333%;
+		float: left;
+		}
+
+
+		&__sm-5 {
+		width: 41.667%;
+		float: left;
+
+
+		}
+		
+		&__sm-7 {
+			width: 58.333%;
+			float: left;
+		}
+
+		&__sm-6 {
+			width: 50%;
+			float: left;
+		}
+
+
+		&__sm-offset-3 {
+			margin-left: 25%;
+			
+		}
+
+		&__sm-offset-1 {
+			margin-left: 8.33%;
+			
+		}
+
+
+
+		
+
+
+	}
+	 
+
+    @mixin atMedium {
+
+    
+	
+	
+
+
+
+    &__medium-3 {
+    	width: 25%;
+    	float: left;
+    }
+
+    &__medium-4 {
+    	width: 33.333%;
+    	float: left;
+    }
+
+	&__medium-5 {
+		width: 41.667%;
+		float: left;
+	}
+	
+	&__medium-7 {
+		width: 58.333%;
+		float: left;
+	}
+
+	&__medium-6 {
+		width: 50%;
+		float: left;
+	}
+
+
+	&__medium-12 {
+		width: 100%;
+	}
+
+
+
+
+	&__offset-3 {
+		margin-left: 25%;
+
+	}
+
+    }
+
+	
+
+	
+	&__bottom-padding {
+		padding-bottom: 25px;
+	}
+	
+
+	&__top-padding {
+		margin-top: 50px;
+
+
+	}
+
+
+	&__top-padding--small {
+		margin-top: 30px;
+
+		@mixin atMedium {
+			margin-top: 0;
+		}
+
+
+	}
+
+	&__top-padding--single {
+		margin-top: 0;
+		@mixin atSmall {
+			margin-top: 40px;
+		}
+
+		@mixin atMedium {
+			margin-top: 0;
+		}
+		
+
+
+	}
+
+	 /*Begin Equal Height Rules */
+    
+    &--equal-height-at-medium {
+        	
+		@mixin atMedium {
+            display: flex;
+        }	
+
+         & > div {
+            float: none;
+            display: flex;
+        }
+      
+       
+    }
+    
+    
+    
+
+
+}

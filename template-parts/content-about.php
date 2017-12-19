@@ -3,6 +3,7 @@
 $about_title = get_field("about_title");
 $about_desc = get_field("about_desc");
 $about_link_text = get_field("about_link_text");
+$about_link_text_url = get_field("about_link_text_url");
 $about_img = get_field("about_img");
 $about_img_default = get_field("about_img_default");
 
@@ -48,11 +49,11 @@ $about_img_default = get_field("about_img_default");
 					</div>
 					<div class="row__medium-7 row__sm-7" >
 						<div class="generic-content-container">
-							<h2 class="headline headline--italic headline--darkrose headline--no-t-margin"><?php echo $about_title ?></h2>
+							<h2 class="headline headline--darkrose headline--no-t-margin"><?php echo $about_title; ?></h2>
 							<div class="about__text-content">	
-								<p><?php echo $about_desc ?></p>
+								<p><?php echo $about_desc; ?></p>
 							
-								<a class="about--right about__link" href="#"><?php echo $about_link_text ?></a>
+								<a class="about--right about__link" href="<?php $abtLink = site_url() . $about_link_text_url; echo $abtLink; ?>"><?php echo $about_link_text; ?></a>
 							</div>
 						</div>
 							

@@ -24,7 +24,8 @@ get_header(); ?>
 					<?php $loop = new WP_Query(array('post_type' => 'images','orderby' => 'post_id', 'order' => 'ASC')); ?>
 					<?php while ($loop->have_posts()) :$loop->the_post(); ?>
 					
-					<div class="row__medium-3 row__sm-2">
+					<div class="row__medium-3 row__sm-6">
+						<?php 	if (! get_field("is_portfolio")) : ?>
 						<?php $gal_img = get_field('gallery_image'); ?>
 
 						<?php
@@ -46,7 +47,7 @@ get_header(); ?>
 
 								
 						
-						
+						<?php 	endif ?>
 					</div>
 
 				<?php endwhile; wp_reset_query();	 ?>

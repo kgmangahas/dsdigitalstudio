@@ -1,0 +1,147 @@
+.headline {
+	
+	font-size: 1.0625rem;
+	font-weight: 400; 
+	position: 	relative;  
+	
+	
+	@mixin atSmall {
+		font-size: 1.0625rem;
+	}
+
+	@mixin atMedium {
+		font-size: 1.125rem;
+	} 
+	
+	&--italic {
+		font-style: italic;
+	}
+	
+	&--darkrose {
+		color: $darkRose;
+	}
+
+
+	&--left-margin {
+		margin-left: 10px;
+	}
+
+	&--no-t-margin {
+		margin-top: 20px;
+
+		@mixin atSmall {
+			margin-top: 20px;
+		}
+
+		@mixin atMedium {
+			margin-top: 5px;
+
+
+		}
+	}
+
+
+	&--small {
+		font-size: 1rem;
+		line-height: 1.4em;
+
+		@mixin atMedium {
+			font-size: 1.25rem;
+			line-height: 1.6em;
+		}
+
+
+	}
+
+	&--thin {
+		font-weight: 300;
+	}
+
+	&--regular {
+		font-weight: 400;
+	}
+
+
+
+	&__bg {
+		position: relative;
+		width: 100%;
+		font-size: 4rem;
+		font-weight: 400;
+		color: rgba($lightgray,.8);
+		z-index: 1;
+		letter-spacing: .212em;
+		opacity: 0;
+
+		@mixin atSmall {
+			font-size: 2.875rem;
+			letter-spacing: .117em;
+			opacity: 1;
+		}
+
+		@mixin atMedium {
+			font-size: 4.3125rem;
+			letter-spacing: .117em;
+			opacity: 1;
+		}
+
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--big {
+		font-size: 1.5625rem;
+		font-weight: 700;
+
+		@mixin atSmall {
+			font-size: 1.875rem;
+			font-weight: 700;
+		}
+	}
+    
+
+    &__absolute {
+    	position: absolute;
+    	top: 20px;
+    	left:50%;
+    	transform: translateX(-50%);
+
+    }
+
+    &__top {
+    	z-index: 12;
+    }
+
+    &__sub {
+    	font-size: 0.9375rem;
+    	margin-top: -20px;
+    	letter-spacing: .068em;
+
+
+    	@mixin atMedium {
+    		font-size: 1rem;
+    		letter-spacing: .232em;
+    	}
+    	@mixin atLarge {
+    		font-size: 1rem;
+    		letter-spacing: .232em;
+    		
+    	}
+    }
+
+
+    &--t-margin {
+		margin-top: 70px;	
+
+		@mixin atMedium {
+			margin-top: 15px;
+		}
+    	
+
+    	@mixin atLarge {
+			margin-top: 15px;
+		}
+    }
+}

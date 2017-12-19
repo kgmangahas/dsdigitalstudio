@@ -1,0 +1,86 @@
+/* Do not edit modules/_sprite directly as it is automatically generated
+Instead edit gulp/template/sprite */
+    
+        .icon {
+             background-image: url('../../assets/images/sprites/sprite-da968e00.svg');  
+        }
+
+        .no-svg .icon {
+            background-image: url('../../assets/images/sprites/sprite-da968e00.png');
+        }
+
+    .icon--branding {
+        width: 65px;
+        height: 65px;
+        background-position: 75.19617224880383% 55.63380281690141%;
+    }
+    
+
+    .icon--ds {
+        width: 86px;
+        height: 243px;
+        background-position: 0 0;
+    }
+    
+
+    .icon--fb {
+        width: 49px;
+        height: 49px;
+        background-position: 30.64516129032258% 81%;
+    }
+    
+
+    .icon--hello {
+        width: 228.32px;
+        height: 60.15px;
+        background-position: 33.76786555677713% 0;
+    }
+    
+
+    .icon--instagram {
+        width: 49px;
+        height: 49px;
+        background-position: 19.35483870967742% 81%;
+    }
+    
+
+    .icon--praises {
+        width: 168px;
+        height: 158px;
+        background-position: 99.78412698412698% 0;
+    }
+    
+
+    .icon--services {
+        width: 189px;
+        height: 158px;
+        background-position: 29.25170068027211% 31.49214659685864%;
+    }
+    
+
+    .icon--triangles {
+        width: 84px;
+        height: 106px;
+        background-position: 0 100%;
+    }
+    
+
+    .icon--tumbler {
+        width: 49px;
+        height: 49px;
+        background-position: 41.935483870967744% 81%;
+    }
+    
+
+    .icon--twitter {
+        width: 49px;
+        height: 49px;
+        background-position: 53.225806451612904% 81%;
+    }
+    
+
+    .icon--webdesign {
+        width: 65px;
+        height: 65px;
+        background-position: 90.7464114832536% 55.63380281690141%;
+    }

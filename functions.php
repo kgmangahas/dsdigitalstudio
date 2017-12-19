@@ -95,6 +95,9 @@ function dsdigitalstudio_content_width() {
 }
 add_action( 'after_setup_theme', 'dsdigitalstudio_content_width', 0 );
 
+
+
+
 /**
  * Register widget area.
  *
@@ -142,6 +145,8 @@ add_image_size( 'dsdigitalstudio-hero-cropped-small', 374, 250, true );
 function dsdigitalstudio_scripts() {	
 
 	wp_enqueue_style( 'dsdigitalstudio-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style('custom_google_fonts','//fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:300,400');
 
 	wp_enqueue_script( 'dsdigitalstudio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

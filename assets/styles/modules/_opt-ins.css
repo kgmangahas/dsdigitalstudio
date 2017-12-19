@@ -1,0 +1,115 @@
+.opt-ins {
+	/* background: rgba($rose,.7) url('../../assets/images/sign-up-bg.png') top center no-repeat; */
+	
+	
+	color: $black;
+	
+	position: relative;
+	margin-left: -25px;
+	margin-right: -25px;
+	text-align: center;;
+	z-index: 14;
+	padding: 40px 10px;
+/* for wordpress */
+		background: linear-gradient(rgba($white,.6),rgba($white,.6)), url('/www.dsdigitalstudio.com/wp/wp-content/themes/dsdigitalstudio/assets/images/sign-up-bg.png');
+
+	@mixin atSmall {
+		padding: 15px 20px;
+		/* background: linear-gradient(rgba($rose,.7),rgba($rose,.7)), url('../../assets/images/sign-up-bg.png'); */
+		
+
+		
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+
+
+	&__content {
+		
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		
+		font-size: 1.125rem;
+			letter-spacing: .037em;
+			line-height: 1.23em;
+		padding: 0 50px;
+		padding-bottom: 20px;
+		
+		@mixin atMedium {
+			font-size: 1rem;
+			letter-spacing: .072em;
+			line-height: 1.23em;
+			padding: 0 150px;
+			padding-bottom: 20px
+		}
+		
+	}
+
+
+	/* titlewithstrike */
+	&__title {
+
+		
+		
+		font-family: 'Libre Baskerville', serif;
+		font-size: 1rem;
+		font-weight: 400;		
+		text-align: center;
+		
+		
+		
+
+		@mixin atMedium {
+			
+			font-size: 1.25rem;
+			
+		}
+
+		
+	}
+
+	
+
+	&__submit {
+		display: block;
+		margin-top: 30px;
+		color: $black !important;
+		border: solid $black 1px !important;
+		background-color: inherit !important;
+		font-size: 0.875rem !important;
+
+		
+	}
+
+
+	&__email {
+		margin-top: 40px;
+		position: relative;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+		text-align: center;
+		width:100%;
+		height: 50px;
+		
+
+		@mixin atMedium {
+			width: 70%;
+		}
+
+
+
+
+	}
+
+	
+
+
+
+
+	
+}

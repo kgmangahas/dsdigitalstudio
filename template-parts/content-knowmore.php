@@ -15,23 +15,16 @@
 	<div id="go-to-next" class="page-section">
 			<div class="wrapper">
 				<div class="go-to-next">
-					<div class="go-to-next--center go-to-next--t-b-border row__bottom-padding">
+					<div class="go-to-next--center  row__bottom-padding">
 						<h2 class="go-to-next__title"><?php echo $know_more_title; ?></h2>
-						<div class="go-to-next__content">
-							<ul>
-								<li><a href="<?php echo $link1_reference_page;?>"><?php echo $link1_text; ?></a></li>
-								<?php if(!empty($link2_text)) :  ?>
-								<li><a href="<?php echo $link2_reference_page;?>"><?php echo $link2_text; ?></a></li>
-								<?php endif ?>
-								<?php if(!empty($link3_text)) : ?>
-								<li><a href="<?php echo $link3_reference_page;?>"><?php echo $link3_text; ?></a></li>
-								<?php endif ?>
 
-							</ul>
+						<div class="row row--gutters go-to-next__content go-to-next--realign-padding">	
 
+								<div class="row__medium-6 ">	<a class="go-to-next__link" href="<?php echo site_url(); echo $link1_reference_page;?>"><?php echo $link1_text; ?></a></div>
+								<div class="row__medium-6">	<a class="go-to-next__link" href="<?php echo site_url(); echo $link2_reference_page;?>"><?php echo $link2_text; ?></a></div>
 						</div>
 						
-					</div>
 				</div>
 			</div>
-		</div>;
+		</div>
+	</div>
